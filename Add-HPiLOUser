@@ -1,3 +1,4 @@
+#Adding a new user(read only) to iLO
 $iloservers = get-content C:\temp\ilouseradd\ilo-ipaddress.txt
 $iloaccaunt=read-host "Enter the account from ILO"
 $ilopassword=read-host "Enter the password ILO"
