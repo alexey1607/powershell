@@ -1,0 +1,9 @@
+$iloservers = get-content C:\temp\ilouseradd\ilo-ipaddress.txt
+$iloaccaunt=read-host "Enter the account from ILO"
+$ilopassword=read-host "Enter the password ILO"
+$externaluserlogin=read-host "Enter the account new user"
+$externaluserpassword=read-host "Enter a password for the new user"
+foreach ($iloip in $iloservers)
+{
+Add-HPiLOUser -Username $iloaccaunt -Password $ilopassword -Server $iloip -AdminPriv No -ConfigILOPriv No -NewPassword $externaluserpassword -NewUserLogin $externaluserlogin -NewUsername $externaluserlogin -RemoteConsPriv No -ResetServerPriv No -VirtualMediaPriv No -Debug
+}
