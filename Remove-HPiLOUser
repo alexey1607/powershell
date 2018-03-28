@@ -1,6 +1,0 @@
-Set-HPiLOSessionTimeOut -TimeOut 120 -Verbose
-$iloservers = get-content C:\temp\ilouseradd\ilo-ipaddress.txt
-foreach ($iloip in $iloservers)
-{
-Remove-HPiLOUser -Server $iloip -Username ruadmin -Password Superpassword01 -RemoveUserLogin croc-user -DisableCertificateAuthentication -Debug
-}
